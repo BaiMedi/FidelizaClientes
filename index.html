@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hoja de Trabajo: Sistema de Fidelización con IA</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f9f9f9;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            color: #333;
+        }
+        label {
+            display: block;
+            margin: 10px 0 5px;
+        }
+        input, textarea, button {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        button {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        .result {
+            background-color: #e9f7e9;
+            padding: 15px;
+            border: 1px solid #c3e6cb;
+            border-radius: 5px;
+            margin-top: 20px;
+        }
+        .cta-button {
+            display: block;
+            text-align: center;
+            background-color: #28a745;
+            color: #fff;
+            padding: 10px 20px;
+            margin-top: 20px;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 5px;
+        }
+        .cta-button:hover {
+            background-color: #218838;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Hoja de Trabajo: Sistema de Fidelización con IA</h1>
+        <p>Rellena los campos a continuación para identificar las mejores estrategias de fidelización para tu negocio.</p>
+        <form id="fidelityForm">
+            <label for="customerSegment">Describe un segmento clave de tus clientes:</label>
+            <textarea id="customerSegment" placeholder="Ejemplo: Clientes que compran una vez al mes..."></textarea>
+            
+            <label for="loyaltyAction">¿Qué acciones actuales usas para fidelizarlos?</label>
+            <textarea id="loyaltyAction" placeholder="Ejemplo: Ofrezco descuentos o programas de puntos..."></textarea>
+            
+            <label for="toolsUsed">¿Qué herramientas utilizas actualmente para estas acciones?</label>
+            <textarea id="toolsUsed" placeholder="Ejemplo: Uso correos electrónicos y redes sociales para promociones..."></textarea>
+            
+            <button type="button" onclick="generateFidelityPlan()">Generar Plan de Fidelización</button>
+        </form>
+        
+        <div id="result" class="result" style="display: none;">
+            <h2>Recomendación</h2>
+            <p id="recommendationText"></p>
+        </div>
+
+        <a href="https://klicana.work/tdivKK" class="cta-button" target="_blank">ACCEDE A LUCRACHAT IA</a>
+    </div>
+    
+    <script>
+        function generateFidelityPlan() {
+            const customerSegment = document.getElementById("customerSegment").value;
+            const loyaltyAction = document.getElementById("loyaltyAction").value;
+            const toolsUsed = document.getElementById("toolsUsed").value;
+            
+            const recommendation = `
+                <strong>Segmento:</strong> ${customerSegment || "Sin especificar"}<br>
+                <strong>Acciones Actuales:</strong> ${loyaltyAction || "Sin especificar"}<br>
+                <strong>Herramientas Actuales:</strong> ${toolsUsed || "Sin especificar"}<br><br>
+                <strong>Sugerencia:</strong> Mejora tu fidelización utilizando IA. Por ejemplo:
+                <ul>
+                    <li>Implementa campañas personalizadas basadas en datos de comportamiento.</li>
+                    <li>Usa herramientas como Zendesk o ActiveCampaign para automatizar interacciones.</li>
+                    <li>Monitorea señales de abandono y toma acción proactiva.</li>
+                </ul>
+            `;
+            
+            document.getElementById("recommendationText").innerHTML = recommendation;
+            document.getElementById("result").style.display = "block";
+        }
+    </script>
+</body>
+</html>
